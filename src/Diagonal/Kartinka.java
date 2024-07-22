@@ -1,7 +1,8 @@
+package Diagonal;
+
+import Diagonal.Board;
+
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Kartinka {
     {
@@ -16,6 +17,5 @@ public class Kartinka {
         frame.setVisible(true);
         Board board = new Board();
         frame.add(board);
-        board.initTimer();
     }
 }

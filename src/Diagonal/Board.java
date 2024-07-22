@@ -1,3 +1,5 @@
+package Diagonal;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,6 +10,9 @@ public class Board extends JPanel {
     int x;
     int y;
 
+    Board(){
+        initTimer();
+    }
 
     @Override
     protected void paintComponent(Graphics g) {
