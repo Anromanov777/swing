@@ -23,7 +23,7 @@ public class Kvadrat extends JPanel {
     }
 
     private ImageIcon getImage() {
-        ImageIcon icon = new ImageIcon("res/Nastia.png");
+        ImageIcon icon = new ImageIcon("res/icon.png");
         return icon;
     }
 
@@ -65,8 +65,6 @@ public class Kvadrat extends JPanel {
             }
             break;
         }
-
-
     }
 
     ActionListener listener = new ActionListener() {
