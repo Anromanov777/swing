@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Board extends JPanel {
+
     int x;
     int y;
 
@@ -21,25 +22,20 @@ public class Board extends JPanel {
         return icon.getImage();
     }
 
-    public void setXY() {
-        x += 10;
-        y += 10;
-        repaint();
-    }
 
     ActionListener listener = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            setXY();
+            x += 1;
+            y += 1;
+            repaint();
         }
     };
 
-    void initTimer(){
-        Timer timer=new Timer(300,listener);
+    void initTimer() {
+        Timer timer = new Timer(30, listener);
         timer.start();
     }
-
-
 
 
 }

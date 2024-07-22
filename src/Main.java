@@ -8,8 +8,8 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        Kartinka kartinka=new Kartinka();
-        kartinka.initFrame();
+        new Kartinka();
+
 
 
     }
