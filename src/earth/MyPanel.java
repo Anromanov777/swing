@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 public class MyPanel extends JPanel {
     int xz;
     int yz;
-    int grad;
+    double grad=0.0;
 
 
     MyPanel() {
@@ -34,11 +34,11 @@ public class MyPanel extends JPanel {
     };
 
     void draw1(int radius) {
-        if (grad == 360) grad = 0;
+        if (grad == 360.0) grad = 0.0;
         double radian = Math.toRadians(grad);
         xz = (int) (radius * Math.cos(radian)) + getCentr(2, "x");
         yz = (int) (radius * Math.sin(radian)) + getCentr(2, "y");
-        grad++;
+        grad+=1;
     }
 
     Timer timer = new Timer(1, listener);
