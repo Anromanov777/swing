@@ -10,12 +10,13 @@ import java.io.IOException;
 public class Ris extends JPanel {
     int x;
     int y;
+    boolean b;
 
     JFrame frame = new JFrame("Повторение");
 
     public Ris() {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800, 600);
+        frame.setSize(500, 600);
         frame.setLocationRelativeTo(null);
         frame.add(this);
         frame.setVisible(true);
@@ -27,9 +28,9 @@ public class Ris extends JPanel {
         Graphics2D g2 = (Graphics2D) g;
 
         try {
-            for (int i = 0; i < 12; i++) {
-                y = 50 * i;
-                for (int j = 0; j < 16; j++) {
+            for (int i = 0; i < 10; i++) {
+                y = 50 * i; b=!b;
+                for (int j = 0; j < 10; j++) {
                     x = 50 * j;
                     g2.drawImage(getImag(), x, y, null);
                 }
@@ -40,8 +41,18 @@ public class Ris extends JPanel {
     }
 
     private BufferedImage getImag() throws IOException {
-        BufferedImage image = ImageIO.read(new File("res/trava.jpg"));
-        return image.getSubimage(0, 0, 50, 50);
+
+        BufferedImage image = ImageIO.read(new File("res/kras.jpg"));
+        BufferedImage image2 = ImageIO.read(new File("res/zel.jpg"));
+        if (b) {
+            b = false;
+            return image;
+
+        } else {
+            b = true;
+            return image2;
+
+        }
 
     }
 }
