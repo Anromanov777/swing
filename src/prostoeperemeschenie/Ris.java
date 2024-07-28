@@ -10,10 +10,13 @@ public class Ris extends JFrame implements KeyListener {
     int y;
 
     Ris() {
-        setSize(1000, 1000);
-        setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         add(panel);
+        panel.setPreferredSize(new Dimension(1000,1000));
+        pack();
+        setLocationRelativeTo(null);
+
+
         setVisible(true);
         addKeyListener(this);
     }
