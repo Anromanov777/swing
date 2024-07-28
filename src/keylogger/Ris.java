@@ -1,17 +1,15 @@
-package boleehitroeperemeschenie;
+package keylogger;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.*;
 
 public class Ris extends JPanel implements KeyListener {
-    int x = 0;
-    int y = 0;
-
     JFrame frame = new JFrame();
 
-    public Ris() {
+    Ris() {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(this);
         setPreferredSize(new Dimension(1000, 1000));
@@ -25,34 +23,23 @@ public class Ris extends JPanel implements KeyListener {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
-        g2.drawImage(new ImageIcon("res/kras.jpg").getImage(), x, y, this);
     }
 
     @Override
     public void keyTyped(KeyEvent e) {
-
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            x += 50;
-            if (x >= getWidth()) x = x - getWidth();
+        File file=new File("names.txt");
+        char a=e.getKeyChar();
+        if ((a+"").matches("[a-zA-Z]| |\\d*")){
+        try (OutputStream outputStream=new FileOutputStream(file,true)){
+            outputStream.write(e.getKeyChar());
+        }catch (Exception u){
+            u.printStackTrace();
         }
-        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            x -= 50;
-            if (x < 0) x = getWidth() + x;
-        }
-        if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            y += 50;
-            if (y >= getHeight()) y = y - getHeight();
-        }
-        if (e.getKeyCode() == KeyEvent.VK_UP) {
-            y -= 50;
-            if (y < 0) y = getHeight() + y;
-        }
-        repaint();
-
+        System.out.println(e.getKeyCode());}
     }
 
     @Override
