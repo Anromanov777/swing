@@ -9,7 +9,9 @@ public class Main {
         System.out.println(b.matches("(-|\\+)?\\d*"));
         System.out.println(c.matches("(-|\\+)?\\d*"));
 
-        String d="g1234561";
-        System.out.println();
+        String d="1234561";
+        System.out.println(d.matches("[0-9]+"));
+
+
     }
 }
