@@ -25,7 +25,7 @@ public class Ris extends JPanel {
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
                 for (int i = 0; i < list.size(); i++) {
-                    if (e.getX() > list.get(i)[0] - 35 & e.getX() < list.get(i)[0] + 35 & e.getY() > list.get(i)[1] - 35 & e.getY() < list.get(i)[1] + 35) {
+                    if (e.getX() > list.get(i)[0] - 35 & e.getX() < list.get(i)[0] + 35 & e.getY() > list.get(i)[1] - 35 & e.getY() < list.get(i)[1] + 35&e.getButton()==2) {
                         list.remove(i);
                         repaint();
                         return;
