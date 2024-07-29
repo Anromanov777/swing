@@ -4,13 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Random;
 
 public class Ris extends JPanel {
-    int x;
-    int y;
-    ArrayList<Integer> list = new ArrayList<>();
+    LinkedList<Integer[]> list = new LinkedList<>();
 
     public Ris() {
         JFrame frame = new JFrame();
@@ -24,17 +22,17 @@ public class Ris extends JPanel {
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
-                mous1();
-                list.add(e.getX());
-                list.add(e.getY());
+                Random r = new Random();
+                Integer[] mas = new Integer[5];
+                mas[0] = e.getX();
+                mas[1] = e.getY();
+                mas[2] = r.nextInt(0, 256);
+                mas[3] = r.nextInt(0, 256);
+                mas[4] = r.nextInt(0, 256);
+                list.add(mas);
                 repaint();
             }
         });
-    }
-
-    void mous1() {
-        Random random = new Random();
-        setBackground(Color.getHSBColor(random.nextFloat(0, 361), random.nextFloat(40, 80), random.nextFloat(60, 80)));
     }
 
     @Override
@@ -45,8 +43,9 @@ public class Ris extends JPanel {
     }
 
     void draw3(Graphics2D g) {
-        for (int i = 0; i < list.size(); i += 2) {
-            g.drawString(list.get(i) + " " + list.get(i + 1), list.get(i), list.get(i + 1));
+        for (Integer[] integers : list) {
+            g.setColor(new Color(integers[2], integers[3], integers[4]));
+            g.fillOval(integers[0] - 35, integers[1] - 35, 70, 70);
         }
     }
 }
