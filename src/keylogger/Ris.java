@@ -1,22 +1,16 @@
 package keylogger;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.*;
 
-public class Ris extends JPanel implements KeyListener {
-    JFrame frame = new JFrame();
+public class Ris extends JFrame implements KeyListener {
 
     Ris() {
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(this);
-        setPreferredSize(new Dimension(1000, 1000));
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-        frame.addKeyListener(this);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+        addKeyListener(this);
     }
 
     @Override
