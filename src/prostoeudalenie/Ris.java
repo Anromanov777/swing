@@ -4,11 +4,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.geom.Ellipse2D;
 import java.util.LinkedList;
 import java.util.Random;
 
 public class Ris extends JPanel {
-    LinkedList<Integer[]> list = new LinkedList<>();
+    LinkedList<Ellipse2D> list = new LinkedList<>();
+    LinkedList<Color> colors = new LinkedList<>();
 
     public Ris() {
         JFrame frame = new JFrame();
@@ -20,27 +22,32 @@ public class Ris extends JPanel {
         frame.setVisible(true);
         addMouseListener(new MouseAdapter() {
 
+            @Override
+            public void mouseMoved(MouseEvent e) {
+                super.mouseMoved(e);
+
+                setBackground(Color.orange);
+            }
 
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
-                for (int i = 0; i < list.size(); i++) {
-                    if (e.getX() > list.get(i)[0] - 35 & e.getX() < list.get(i)[0] + 35 & e.getY() > list.get(i)[1] - 35 & e.getY() < list.get(i)[1] + 35&e.getButton()==2) {
-                        list.remove(i);
-                        repaint();
-                        return;
+                if (e.getButton() == MouseEvent.BUTTON2) {
+                    for (int i = list.size()-1; i !=-1 ; i--) {
+                        if (list.get(i).contains(e.getPoint())) {
+                            list.remove(i);
+                            colors.remove(i);
+                            repaint();
+                            return;
+                        }
                     }
+                } else {
+                    Random r = new Random();
+                    colors.add(new Color(r.nextInt(0, 256), r.nextInt(0, 256), r.nextInt(0, 256)));
+                    Ellipse2D krug = new Ellipse2D.Double(e.getX() - 35, e.getY() - 35, 70, 70);
+                    list.add(krug);
+                    repaint();
                 }
-
-                Random r = new Random();
-                Integer[] mas = new Integer[5];
-                mas[0] = e.getX();
-                mas[1] = e.getY();
-                mas[2] = r.nextInt(0, 256);
-                mas[3] = r.nextInt(0, 256);
-                mas[4] = r.nextInt(0, 256);
-                list.add(mas);
-                repaint();
             }
         });
     }
@@ -53,9 +60,9 @@ public class Ris extends JPanel {
     }
 
     void draw3(Graphics2D g) {
-        for (Integer[] integers : list) {
-            g.setColor(new Color(integers[2], integers[3], integers[4]));
-            g.fillOval(integers[0] - 35, integers[1] - 35, 70, 70);
+        for (int i = 0; i < list.size(); i++) {
+            g.setColor(colors.get(i));
+            g.fill(list.get(i));
         }
     }
 }
