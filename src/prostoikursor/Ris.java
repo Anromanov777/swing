@@ -1,4 +1,4 @@
-package prostoeudalenie;
+package prostoikursor;
 
 import javax.swing.*;
 import java.awt.*;
@@ -20,6 +20,7 @@ public class Ris extends JPanel {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         addMouseListener(new MouseAdapter() {
 
             @Override
