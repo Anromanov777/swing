@@ -77,7 +77,7 @@ public class Ris extends JPanel {
 
                 } else if (e.getButton() == MouseEvent.BUTTON2) {
                     pressButton2 = true;
-                    for (int i = list.size() - 1; i != -1; i--) {
+                    for (int i = 0; i <list.size(); i++) {
                         Ellipse2D k = new Ellipse2D.Double(list.get(i)[0] - 35, list.get(i)[1] - 35, 70, 70);
                         if (k.contains(e.getPoint())) {
                             vibraniiKrug = i;
