@@ -65,6 +65,7 @@ public class Ris extends JPanel {
                 pressButton1 = false;
                 pressButton2 = false;
                 timer2.stop();
+                vibraniiKrug = -1;
             }
 
             @Override
@@ -82,6 +83,15 @@ public class Ris extends JPanel {
                             vibraniiKrug = i;
                         }
                     }
+                    if (e.getClickCount() == 2) {
+                        for (int i = list.size() - 1; i != -1; i--) {
+                            Ellipse2D k = new Ellipse2D.Double(list.get(i)[0] - 35, list.get(i)[1] - 35, 70, 70);
+                            if (k.contains(e.getPoint())) {
+                                list.remove(i);
+                                repaint();
+                            }
+                        }
+                    }
                 } else if (e.getButton() == MouseEvent.BUTTON1) {
                     pressButton1 = true;
                     Random r = new Random();
@@ -93,6 +103,7 @@ public class Ris extends JPanel {
                     mas[4] = r.nextInt(0, 256);
                     list.add(mas);
                     repaint();
+
                 }
             }
         });
@@ -107,8 +118,10 @@ public class Ris extends JPanel {
                 if (pressButton2) {
                     newX = e.getX();
                     newY = e.getY();
-                    list.get(vibraniiKrug)[0] = newX;
-                    list.get(vibraniiKrug)[1] = newY;
+                    if (vibraniiKrug != -1) {
+                        list.get(vibraniiKrug)[0] = newX;
+                        list.get(vibraniiKrug)[1] = newY;
+                    }
                     repaint();
                 }
                 newX = e.getX();
