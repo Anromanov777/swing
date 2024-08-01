@@ -66,6 +66,7 @@ public class Ris extends JPanel {
                 pressButton2 = false;
                 timer2.stop();
                 vibraniiKrug = -1;
+
             }
 
             @Override
@@ -74,6 +75,7 @@ public class Ris extends JPanel {
 
                 if (e.getButton() == MouseEvent.BUTTON3) {
                     sbros.start();
+                    System.out.println(list.size());
 
                 } else if (e.getButton() == MouseEvent.BUTTON2) {
                     pressButton2 = true;
