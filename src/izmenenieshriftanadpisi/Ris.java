@@ -26,7 +26,6 @@ public class Ris{
             @Override
             public void stateChanged(ChangeEvent e) {
                 x = slider.getValue();
-                System.out.println(x);
                 label.setFont(new Font("", Font.BOLD, x));
             }
         });
