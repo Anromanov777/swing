@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ActionLisner:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ActionLisner_jar</output-path>
+    <root id="archive" name="ActionLisner.jar">
+      <element id="module-output" name="ActionLisner" />
+    </root>
+  </artifact>
+</component>
