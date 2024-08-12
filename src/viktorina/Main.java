@@ -1,14 +1,13 @@
-package jformdisigner;
+package viktorina;
 
 import javax.swing.*;
 
 public class Main {
+    static JFrame frame=new JFrame();
 
     public static void main(String[] args) {
-        Ttt ttt=new Ttt();
-        JFrame frame=new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(ttt);
+        frame.add(new Ttt());
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
