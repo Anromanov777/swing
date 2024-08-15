@@ -1,0 +1,523 @@
+JFDML JFormDesigner: "8.2.2.0.382" Java: "21.0.2" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+			"$columnSpecs": "0, 0, 0, 0, 0"
+			"$rowSpecs": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0"
+			"$hGap": 5
+			"$vGap": 5
+			"$alignLeft": true
+			"$alignTop": true
+		} ) {
+			name: "this"
+			"preferredSize": new java.awt.Dimension( 1000, 1200 )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Регистрация кандидата на должность"
+				"font": new java.awt.Font( "Segoe UI", 0, 26 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"weightx": 1.0
+				"hAlign": 0
+				"insets": new java.awt.Insets( 60, 30, 30, 30 )
+				"gridwidth": 5
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Фамилия"
+				"font": new java.awt.Font( "Segoe UI", 0, 20 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 1
+				"insets": new java.awt.Insets( 0, 30, 0, 0 )
+				"hAlign": 4
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 1
+				"insets": &Insets0 new java.awt.Insets( 0, 30, 0, 30 )
+				"gridwidth": 4
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Имя"
+				"font": &Font0 new java.awt.Font( "Segoe UI", 0, 20 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 2
+				"hAlign": 4
+				"vAlign": 0
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 2
+				"insets": #Insets0
+				"gridwidth": 4
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "Отчество"
+				"font": #Font0
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 3
+				"hAlign": 4
+				"vAlign": 0
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField3"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 3
+				"insets": #Insets0
+				"gridwidth": 4
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label9"
+				"text": "Номер телефона"
+				"font": &Font1 new java.awt.Font( "Segoe UI", 0, 20 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 4
+				"insets": new java.awt.Insets( 30, 30, 0, 0 )
+				"hAlign": 4
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField4"
+				"minimumSize": new java.awt.Dimension( 64, 33 )
+				"font": new java.awt.Font( "Segoe UI", 0, 16 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 4
+				"insets": #Insets0
+				"gridwidth": 4
+				"vAlign": 3
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "Желаемая должность"
+				"font": #Font1
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 5
+				"insets": new java.awt.Insets( 10, 30, 0, 0 )
+				"hAlign": 4
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBoxDolshnost"
+				"font": new java.awt.Font( "Segoe UI", 0, 16 )
+				"preferredSize": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "Повар"
+					addElement( "Повар" )
+					addElement( "Курьер" )
+				}
+				"selectedIndex": -1
+				"minimumSize": new java.awt.Dimension( 111, 28 )
+				"editable": true
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "comboBox1", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 5
+				"hAlign": 2
+				"vAlign": 3
+				"insets": new java.awt.Insets( 0, 30, 0, 0 )
+				"gridwidth": 4
+				"weightx": 1.0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": "Наличие медкнижки"
+				"font": &Font2 new java.awt.Font( "Segoe UI", 0, 20 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 6
+				"hAlign": 4
+				"insets": new java.awt.Insets( 10, 0, 0, 0 )
+			} )
+			add( new FormComponent( "javax.swing.JCheckBox" ) {
+				name: "checkBox1"
+				"font": new java.awt.Font( "Segoe UI", 0, 20 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 6
+				"insets": new java.awt.Insets( 0, 30, 0, 0 )
+				"vAlign": 3
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label7"
+				"text": "Пол"
+				"font": #Font2
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 7
+				"hAlign": 4
+				"insets": new java.awt.Insets( 10, 0, 0, 0 )
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "radioButton1"
+				"text": "Мк"
+				"$buttonGroup": new FormReference( "buttonGroup1" )
+				"font": new java.awt.Font( "Segoe UI", 0, 20 )
+				"focusable": false
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 7
+				"insets": new java.awt.Insets( 0, 30, 0, 0 )
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "radioButton2"
+				"text": "Ж"
+				"$buttonGroup": new FormReference( "buttonGroup1" )
+				"font": new java.awt.Font( "Segoe UI", 0, 20 )
+				"focusable": false
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 2
+				"gridy": 7
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label8"
+				"text": "Возраст"
+				"font": #Font2
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 8
+				"hAlign": 4
+				"insets": new java.awt.Insets( 10, 0, 0, 0 )
+			} )
+			add( new FormComponent( "javax.swing.JSpinner" ) {
+				name: "spinner1"
+				"font": new java.awt.Font( "Segoe UI", 0, 16 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 8
+				"insets": new java.awt.Insets( 0, 30, 0, 0 )
+				"gridwidth": 2
+				"vAlign": 3
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label11"
+				"text": "Дополнительная информация"
+				"font": new java.awt.Font( "Segoe UI", 0, 24 )
+				"verticalAlignment": 1
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 9
+				"gridwidth": 5
+				"hAlign": 0
+				"weightx": 1.0
+				"insets": new java.awt.Insets( 30, 0, 30, 0 )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+				"$columnSpecs": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0"
+				"$rowSpecs": "0, 0, 0, 0"
+				"$hGap": 5
+				"$vGap": 5
+				"$alignTop": true
+			} ) {
+				name: "panel2"
+				"preferredSize": new java.awt.Dimension( 1000, 100 )
+				"visible": false
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label16"
+					"text": "Желаемый график"
+					"font": new java.awt.Font( "Segoe UI", 0, 16 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"insets": new java.awt.Insets( 0, 30, 0, 0 )
+					"vAlign": 5
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "comboBox3"
+					"font": new java.awt.Font( "Segoe UI", 0, 16 )
+					"maximumRowCount": 22
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "2 через 2"
+						addElement( "2 через 2" )
+						addElement( "Подработка" )
+						addElement( "В выходные" )
+					}
+					"editable": true
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 1
+					"gridwidth": 2
+					"insets": new java.awt.Insets( 0, 30, 0, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JCheckBox" ) {
+					name: "checkBox3"
+					"text": "Свой ответ"
+					"font": new java.awt.Font( "Segoe UI", 0, 16 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 3
+					"insets": new java.awt.Insets( 0, 20, 0, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField5"
+					"enabled": false
+					"font": new java.awt.Font( "Segoe UI", 0, 16 )
+					"editable": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 4
+					"insets": new java.awt.Insets( 0, 20, 0, 30 )
+					"gridwidth": 11
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label14"
+					"text": "<html>Расскажите о своих успехах<br> на прежнем месте работы"
+					"font": &Font3 new java.awt.Font( "Segoe UI", 0, 16 )
+					"horizontalAlignment": 11
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 1
+					"insets": new java.awt.Insets( 0, 30, 0, 0 )
+					"vAlign": 0
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane2"
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "textArea2"
+						"rows": 4
+						"font": new java.awt.Font( "Segoe UI", 0, 20 )
+						"lineWrap": true
+						"preferredSize": new java.awt.Dimension( 662, 10 )
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 1
+					"gridy": 1
+					"gridwidth": 14
+					"insets": new java.awt.Insets( 30, 30, 0, 30 )
+					"vAlign": 5
+					"weighty": 1.0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label17"
+					"text": "Компетенции"
+					"font": #Font3
+					"horizontalAlignment": 11
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 2
+					"insets": new java.awt.Insets( 0, 30, 0, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JList" ) {
+					name: "list2"
+					"font": new java.awt.Font( "Segoe UI", 0, 16 )
+					"model": new javax.swing.DefaultListModel {
+						addElement( "Японская кухня" )
+						addElement( "Итальянская кухня" )
+						addElement( "Русская кухня" )
+						addElement( "Татарская кухня" )
+					}
+					"toolTipText": "Можно выбрать несколько компетенций,"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 1
+					"gridy": 2
+					"insets": new java.awt.Insets( 0, 30, 0, 0 )
+					"gridwidth": 3
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label18"
+					"text": "Желаемая зарплата"
+					"font": #Font3
+					"horizontalAlignment": 11
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 3
+					"vAlign": 0
+					"insets": new java.awt.Insets( 0, 30, 0, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JSlider" ) {
+					name: "slider2"
+					"font": new java.awt.Font( "Segoe UI", 0, 16 )
+					"majorTickSpacing": 10
+					"minimum": 20
+					"minorTickSpacing": 5
+					"paintTicks": true
+					"paintLabels": true
+					"visible": false
+					addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "slider2StateChanged", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 1
+					"gridy": 3
+					"insets": new java.awt.Insets( 20, 30, 0, 30 )
+					"hAlign": 5
+					"gridwidth": 14
+					"weightx": 1.0
+					"vAlign": 0
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 10
+				"gridwidth": 5
+				"vAlign": 5
+				"weighty": 1.0
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+				"$columnSpecs": "0, 0, 0, 0, 0"
+				"$rowSpecs": "0, 0, 0"
+				"$hGap": 5
+				"$vGap": 10
+				"$alignLeft": true
+				"$alignTop": true
+			} ) {
+				name: "panel1"
+				"preferredSize": new java.awt.Dimension( 1000, 200 )
+				"font": &Font4 new java.awt.Font( "Segoe UI", 0, 16 )
+				"minimumSize": new java.awt.Dimension( 654, 0 )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label10"
+					"text": "Наличие авто"
+					"font": &Font5 new java.awt.Font( "Segoe UI", 0, 16 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"insets": new java.awt.Insets( 0, 30, 0, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton5"
+					"text": "Есть"
+					"font": #Font4
+					"$buttonGroup": new FormReference( "buttonGroup2" )
+					"focusable": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 1
+					"insets": new java.awt.Insets( 0, 30, 0, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton6"
+					"text": "Нет"
+					"font": #Font4
+					"$buttonGroup": new FormReference( "buttonGroup2" )
+					"focusable": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 2
+					"insets": new java.awt.Insets( 0, 10, 0, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label13"
+					"text": "Возраст авто"
+					"font": #Font4
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 3
+					"insets": new java.awt.Insets( 0, 10, 0, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JSpinner" ) {
+					name: "spinner2"
+					"minimumSize": new java.awt.Dimension( 60, 22 )
+					"preferredSize": new java.awt.Dimension( 60, 22 )
+					"font": new java.awt.Font( "Segoe UI", 0, 16 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 4
+					"hAlign": 2
+					"insets": new java.awt.Insets( 0, 10, 0, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label12"
+					"text": "Желаемый график"
+					"font": #Font5
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 1
+					"insets": new java.awt.Insets( 0, 30, 0, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "comboBox2"
+					"font": #Font4
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "2 через 2"
+						addElement( "2 через 2" )
+						addElement( "Вечер" )
+						addElement( "Выходные" )
+						addElement( "Ежедневно" )
+					}
+					"editable": true
+					"preferredSize": new java.awt.Dimension( 123, 28 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 1
+					"gridy": 1
+					"insets": new java.awt.Insets( 0, 30, 0, 0 )
+					"hAlign": 2
+					"vAlign": 0
+				} )
+				add( new FormComponent( "javax.swing.JCheckBox" ) {
+					name: "checkBox5"
+					"text": "Свой ответ"
+					"font": #Font4
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox5", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 2
+					"gridy": 1
+					"insets": new java.awt.Insets( 0, 10, 0, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField8"
+					"font": #Font4
+					"editable": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 3
+					"gridy": 1
+					"insets": new java.awt.Insets( 0, 10, 0, 30 )
+					"gridwidth": 2
+					"weightx": 1.0
+					"vAlign": 5
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label23"
+					"text": "<html>Опыт работы в доставке<br> готовой еды"
+					"font": new java.awt.Font( "Segoe UI", 0, 16 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 2
+					"hAlign": 4
+					"insets": new java.awt.Insets( 0, 30, 0, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JCheckBox" ) {
+					name: "checkBox6"
+					"text": "Есть"
+					"font": new java.awt.Font( "Segoe UI", 0, 16 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox6", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 1
+					"gridy": 2
+					"insets": new java.awt.Insets( 0, 30, 0, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField9"
+					"font": new java.awt.Font( "Segoe UI", 0, 16 )
+					"toolTipText": "Место работы доставки"
+					"cursor": new java.awt.Cursor( 2 )
+					"editable": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 2
+					"gridy": 2
+					"gridwidth": 3
+					"vAlign": 0
+					"insets": new java.awt.Insets( 0, 10, 0, 30 )
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 12
+				"gridwidth": 5
+				"weightx": 1.0
+				"hAlign": 5
+				"vAlign": 5
+				"weighty": 0.5
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Сохранить"
+				"font": new java.awt.Font( "Segoe UI", 0, 20 )
+				"focusable": false
+				"preferredSize": new java.awt.Dimension( 150, 40 )
+				"minimumSize": new java.awt.Dimension( 127, 40 )
+				"maximumSize": new java.awt.Dimension( 127, 100 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 13
+				"gridwidth": 5
+				"hAlign": 0
+				"vAlign": 1
+				"weighty": 1.0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 330, 0 )
+			"size": new java.awt.Dimension( 905, 1310 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "buttonGroup1"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 1865, 90 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "buttonGroup2"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 1865, 150 )
+		} )
+	}
+}

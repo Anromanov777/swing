@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: calculator.Main
+Main-Class: viktorina.Main
 
