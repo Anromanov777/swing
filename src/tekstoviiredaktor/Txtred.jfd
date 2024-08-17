@@ -1,0 +1,84 @@
+JFDML JFormDesigner: "8.2.2.0.382" Java: "21.0.2" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+			"$columnSpecs": "0, 0, 0, 0"
+			"$rowSpecs": "0, 0, 0"
+			"$hGap": 5
+			"$vGap": 5
+			"$alignTop": true
+		} ) {
+			name: "this"
+			"preferredSize": new java.awt.Dimension( 1000, 600 )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Открыть"
+				"font": new java.awt.Font( "Segoe UI", 0, 16 )
+				"focusable": false
+				"maximumSize": new java.awt.Dimension( 133, 33 )
+				"minimumSize": new java.awt.Dimension( 133, 33 )
+				"preferredSize": new java.awt.Dimension( 145, 40 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"insets": new java.awt.Insets( 40, 20, 0, 0 )
+				"hAlign": 2
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "text"
+				"font": new java.awt.Font( "Segoe UI", 0, 16 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"hAlign": 2
+				"weightx": 1.0
+				"vAlign": 3
+				"insets": new java.awt.Insets( 0, 20, 7, 0 )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "Сохранить"
+				"preferredSize": new java.awt.Dimension( 145, 40 )
+				"font": &Font0 new java.awt.Font( "Segoe UI", 0, 16 )
+				"focusable": false
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button2", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 2
+				"vAlign": 3
+				"insets": &Insets0 new java.awt.Insets( 0, 0, 0, 20 )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button3"
+				"text": "Сохранить как"
+				"preferredSize": new java.awt.Dimension( 145, 40 )
+				"font": #Font0
+				"focusable": false
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button2", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 3
+				"vAlign": 3
+				"insets": #Insets0
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "textArea1"
+					"font": new java.awt.Font( "Segoe UI", 0, 16 )
+					"lineWrap": true
+					"wrapStyleWord": true
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 1
+				"weightx": 1.0
+				"gridwidth": 4
+				"gridheight": 2
+				"weighty": 1.0
+				"insets": new java.awt.Insets( 15, 20, 20, 20 )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 775, 410 )
+			"size": new java.awt.Dimension( 775, 540 )
+		} )
+	}
+}
